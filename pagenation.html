@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>我的微信卡券</title>
+    <link rel="stylesheet" href="../common.partial/header.css" />
+    <link rel="stylesheet" href="src/wx_cardList/index.css" />
+    <script src="../js/jquery-1.8.3.min.js"></script>
+    <script src="../js/common.js"></script>
+</head>
+<body>
+<div id="header"></div>
+<div class="rwrap">
+    <div class="aside">
+        <h2>配置管理</h2>
+        <ul>
+          <li class="active"><a href="wx_cardList.html">我的微信卡券</a><span style="display: block;"></span></li>
+          <li><a href="#">卡券明细</a><span style="display: none;"></span></li>
+          <li><a href="cs_cardIndex.html">卡券核销</a><span style="display: none;"></span></li>
+        </ul>
+   </div>
+    <div class="wrap1">
+        <div id="nav_box" style="min-height: 443px;">
+            <div class="table_box" id="tab0Parent">
+                <table width="100%">
+                    <thead>
+                    <tr>
+                        <th width="20%">卡券名称</th>
+                        <th>种类</th>
+                        <th>总量</th>
+                        <th>剩余可用</th>
+                        <th>限领次数</th>
+                        <th>详情</th>
+                        <th>操作</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                    <tfoot>
+                    <tr class="hide">
+                        <td colspan="100%">暂时没有数据哦</td>
+                    </tr>
+                    </tfoot>
+                </table>
+                <div id="pagination">121</div>
+                <p class="newCard">
+                    <a class="btnBig" href="wx_cardAdd.html?type=3&subType=0">我要生成新的卡券</a>
+                </p>
+            </div>
+            <div class="box hide" id="tab1Parent">        
+            </div>     
+        </div>
+        <div id="pop"></div>
+    </div>
+</div>
+<script type="text/javascript" src="../common.lib/sea.js"></script>
+<script type="text/javascript" src="../common.lib/seajs-text/seajs-text-1.1.1/seajs-text.js"></script>
+<script type="text/javascript" src="../config.js"></script>
+<script>
+    seajs.use("sea_css", function(){
+        seajs.use("../tPagenation/index");
+    });
+</script>
+</body>
+</html>

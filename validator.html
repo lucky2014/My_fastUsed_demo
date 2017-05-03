@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>卡券制作</title>
+    <link rel="stylesheet" href="../common.partial/header.css" />
+    <link rel="stylesheet" href="src/wx_cardAdd/index.css" />
+    <link rel="stylesheet" href="src/common.base/index.css" />
+</head>
+<body>
+<div id="header"></div>
+<div class="wrap">
+    <h1 class="applicationHead">
+        卡券制作
+        <a class="rBack" onclick="history.back()">
+            <img src="src/imgs/rBack.png" alt=""/>返回
+        </a>
+    </h1>
+    <div class="applicationCon">
+        <form id="createCard">
+            <p class="red mt">注：每月可制券 10张，每张券库存不超过 10000 份。</p>
+            <ul class="activity_title">
+                <li class="first">
+                    <span>卡券选择:</span>
+                </li>
+                <li class="sel second rewardType" id="getProduct">   
+
+                </li>
+            </ul>
+            <ul class="activity_img">
+                <li class="first">
+                    <span>卡券名称:</span>
+                </li>
+                <li class="inputBox">
+                    <div class="tit">
+                        <input type="text" name="title" class="title" required placeholder=""  />
+                        <span class="tip">建议填写兑换券提供的服务或礼品名称，描述卡券提供的具体优惠。</span>
+                        <div class="maskSpan1 hide"></div>
+                    </div>
+                </li>
+            </ul>
+            <ul>
+                <li class="first">
+                    <span>卡券颜色:</span>
+                </li>
+                <li class="sel second rewardType" id="getCardColor">
+                  
+               </li>
+            </ul>
+            <ul class="author">
+                <li class="first">
+                    <span>有效期:</span>
+                </li>
+                <li class="second">
+                    <div class="button1 effectiveType active" effectiveType="1">
+                        <b></b>
+                        <span>固定日期</span>
+                        <div class="time">
+                              <input class="datepicker" required id="startTime" name="control_date" type="text" value="" placeholder="请选择起始日期" readonly="readonly" >
+                              <span>-</span>
+                              <input class="datepicker" required id="endTime" name="control_date" type="text" value="" placeholder="请选择结束日期" readonly="readonly" ><img class="ui-datepicker-trigger" src="../images/clock.png" alt="..." title="...">
+                              <i class="hide"></i>
+                        </div>
+                        <em class="hide"></em>
+                    </div>
+                    <div class="button1 effectiveType mrT10" effectiveType="2">
+                        <b></b>
+                        <span>领取后，当天生效，有效天数</span>
+                        <div class="sel second rewardType">
+                            <div class="lf" id="getCardDays"></div>
+                        </div>
+                        <div class="maskSpan"></div>
+                        <em class="hide"></em>
+                    </div>
+                </li>
+            </ul>
+            <ul class="author">
+                <li class="first">
+                    <span>可用时段:</span>
+                </li>
+                <li class="second">
+                    <p class="dayLimitParent">
+                        <i class="button1 but1 active">
+                            <b></b>
+                            <span>全部时段</span>
+                            <em class="hide"></em>
+                        </i>
+                        <i class="button1 but2">
+                            <b></b>
+                            <span>部分时段</span>
+                            <em class="hide"></em>
+                        </i>
+                    </p>
+                    <div id="dayLimit" class="hide">日期：<input type="checkbox" name="dayLimit" value="MONDAY" />周一<input type="checkbox" name="dayLimit" value="TUESDAY" />周二<input type="checkbox" name="dayLimit" value="WEDNESDAY" />周三<input type="checkbox" name="dayLimit" value="THURSDAY" />周四<input type="checkbox" name="dayLimit" value="FRIDAY" />周五<input type="checkbox" name="dayLimit" value="SATURDAY" />周六<input type="checkbox" name="dayLimit" value="SUNDAY" />周日</div>
+                    
+                    <div id="timeLimit" class="hide">时间：
+                        <div class="timeLimit timeLimit1 hide"><input type="text" name="js_hour_start1" required /><span>至</span><input type="text" name="js_hour_end1" index="1" required /></div>
+                        <div class="timeLimit timeLimit2 hide"><input type="text" name="js_hour_start2" required /><span class="span2">至</span><input type="text" name="js_hour_end2" index="2" required /></div><em>请使用24小时制输入时间，格式如02:00至14:30</em>
+                    </div>
+                    <div class="btnAD"><a id="add" class="hide">添加时间段</a><a id="del" class="hide">删除时间段</a></div>
+                </li>
+            </ul>
+            <ul id="cost">
+                <li class="first">
+                    <span>抵扣金额:</span>
+                </li>
+                <li class="inputBox">
+                    <div class="tia">
+                        <input type="text" class="cost" name="cost" value=""  required number="true" /><span class="cardNumSpan">元</span>
+                        <em class="hide cardNumEm"></em>
+                    </div>
+                </li>
+            </ul>
+            <ul>
+                <li class="first">
+                    <span>卡券数量:</span>
+                </li>
+                <li class="inputBox">
+                    <div class="tia">
+                        <input type="text" id="cardNum" name="cardNum" value="" required digits="true"  /><span class="cardNumSpan">张</span>
+                        <em class="hide cardNumEm"></em>
+                    </div>
+                </li>
+            </ul>
+            <ul>
+                <li class="first">
+                    <span>领劵限制:</span>
+                </li>
+                <li class="inputBox">
+                    <div class="tia">
+                        <input type="text" id="limit" name="limit" value="1" required digits="true" /><span class="cardNumSpan">张</span>
+                        <span class="tip">每个用户领券上限，如不填，则默认为1。 </span>
+                    </div>
+                    
+                </li>
+            </ul>
+            <ul>
+                <li class="first">
+                    <span>使用须知:</span>
+                </li>
+                <li class="inputBox">
+                    <textarea cols="45" class="remark" name="remark" rows="5" placeholder="请填写使用本券的注意事项：如使用方法、步骤等"></textarea>
+                </li>
+            </ul>
+            <div class="btnParent"><input type="submit" value="确定" class="btnBig" /></div>
+        </form>
+    </div>
+</div>
+<div id="pop"></div>
+</body>
+<script type="text/javascript" src="../common.lib/sea.js"></script>
+<script type="text/javascript" src="../common.lib/seajs-text/seajs-text-1.1.1/seajs-text.js"></script>
+<script type="text/javascript" src="../config.js"></script>
+<script>
+    seajs.use("sea_css", function(){
+        seajs.use("../tValidator/index");
+    });
+</script>
+</html>

@@ -1,0 +1,321 @@
+.sel>div>ul{
+    width:100%;
+}
+.sel>div{
+    width:244px;
+}
+.button1 .sel{
+    position: relative;
+    top:8px;
+    display: inline-block;
+}
+.rBack{
+    float: right;
+}
+.rBack img{
+    vertical-align: top;
+    margin-right: 4px;
+}
+
+input{
+    padding: 0;
+    margin: 0;
+    border:none;
+}
+.time{
+    display: inline-block;
+}
+a{
+    text-decoration: none;
+}
+p{
+    padding-top: 20px;
+    font-size: 15px;
+}
+ul{
+    clear:both;
+}
+ul>li{
+    line-height: 32px;
+}
+ul>li.first{
+    width:100px;
+    font-size:15px;
+    margin-top: 16px;
+}
+ul>li,.way>div>p{
+    float: left;
+    font-size:15px;
+}
+div.tia input{
+    width:150px;
+    display: inline-block;
+}
+ul>li.inputBox{
+    margin-top: 16px;
+    width:700px;
+    line-height: 24px;
+}
+.inputBox>div>input{
+    width: 110px;
+    height:32px;
+    line-height: 32px;
+    padding-left:7px;
+    margin-right: 10px;
+    border: 1px solid #BDC6D5;
+    border-radius: 4px;
+    outline: none;
+    text-align: center;
+}
+.inputBox>div>input.title{ width: 252px; text-align: left;}
+.tip{
+    color:#828fa6;
+    width: 360px;
+    vertical-align: middle;
+    padding-left: 10px;
+    font-size: 14px;
+    position: absolute; left: 146px; top: 0;
+}
+ul>li>.tit{
+    margin-bottom: 4px;
+    display: table-cell; 
+    width: 260px; position: relative;
+}
+ul>li>.tit span.tip{ left: 270px; display: none;}
+ul>li>.tia{
+    margin-bottom: 4px;
+    display: table-cell;
+    line-height: 32px; position: relative;
+}
+ul>li>.tia em{position: absolute;
+    left: 0;
+    top: 0;
+    background: red;
+    width: 117px;
+    height: 32px;
+    z-index: 999; background: #f2f2f2; opacity: .4; border: 1px solid #BDC6D5; border-radius: 4px;}
+ul>li>.tia label.error,.timeLimit label.error{ display: block;}
+ul>li>.limit{
+    margin-bottom: 4px;
+    display: table-cell;
+    width: 150px;
+}
+#timeLimit{ height: 80px;}
+#timeLimit em{ display: inline-block; padding-left: 48px; font-style: normal; padding-top: 24px;}
+.timeLimit{ position: relative; display: inline-block;}
+.timeLimit span{ position: absolute; left: 144px; top:-32px;} 
+.timeLimit input{ position: absolute; left: 40px; top: -32px;} 
+.timeLimit input[name="js_hour_end1"]{ position: absolute; left: 160px;}
+.timeLimit input[name="js_hour_end2"]{ position: absolute; left: 380px;}
+.timeLimit input[name="js_hour_start2"]{ position: absolute; left: 260px;}
+.timeLimit span.span2{ position: absolute; left: 364px; top:-32px;} 
+.timeLimit label.error#js_hour_start1-error{ position: absolute; left: 50px; top: 3px; width: 100px;
+    line-height: 12px;
+    font-size: 12px;}
+.timeLimit label.error#js_hour_start2-error{ position: absolute; left: 267px; top: 3px; width: 100px;
+    line-height: 12px;
+    font-size: 12px;}
+.timeLimit label.error#js_hour_end1-error{ position: absolute; left: 167px; top: 3px; width: 100px;
+    line-height: 12px;
+    font-size: 12px;}
+.timeLimit label.error#js_hour_end2-error{ position: absolute; left: 387px; top: 3px; width: 100px;
+    line-height: 12px;
+    font-size: 12px;}
+.cardNumSpan{ display: inline-block; position: absolute; left: 130px; top:0;}
+.btnAD{ padding-left: 50px; display: block;}
+ul>li.second{
+    margin-top: 16px; position: relative;
+}
+ul>li.second#getProduct .maskSpan{
+    width: 260px; left: -260px; top: 0;
+}
+.second select{
+    width: 260px;
+    border: 1px solid #bdc6d5;
+    border-radius: 4px;
+    color: #bdc6d5;
+    padding: 8px 0 8px 16px;
+    appearance:none;
+    -moz-appearance:none;
+    -webkit-appearance:none;
+    background: url("../../imgs/arrow_down.png") no-repeat scroll 240px center transparent;;
+}
+.second .option{
+    color: #bdc6d5;
+}
+.second i img{
+    vertical-align: middle;
+    margin-top: -2px;
+    margin-right: 6px;
+}
+.second b{
+    width: 14px;
+    height: 14px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-top: -2px;
+    background: url("../imgs/appliaBu1.png") no-repeat;
+}
+.second i b.active{
+    background-image:url("../imgs/appliaBu2.png");
+}
+.second input[type=text]{
+    height:32px;
+    line-height: 32px;
+    padding-left:7px;
+    margin-right: 10px;
+    border: 1px solid #BDC6D5;
+    border-radius: 4px;
+    outline: none;
+    width: 200px;
+}
+.second span input[type=text]{ width: 1px; height: 1px; border:none;}
+.second .time{ position: relative;}
+.second .time i{position: absolute;
+    left: 0;
+    top: 0;
+    height: 34px;
+    width: 136px; z-index: 999;
+    background: #fff; opacity: 0;}
+.second .time input{ width: 120px;}
+.second .time input#endTime{ width: 140px}
+.second .time span{ position: absolute; left: 120px; top: 0; width: 29px; display: block; text-align: center; height: 32px; line-height: 32px;
+ border-top: 1px solid #BDC6D5; border-bottom: 1px solid #BDC6D5; background: #fff; z-index: 44;}
+.down{
+    margin-top: 16px;
+    border: 1px solid #BDC6D5;
+    border-radius: 4px;
+    width: 960px;
+}
+.down>img{
+    padding-left: 30px;
+    padding: 10px;
+    vertical-align: middle;
+    padding-right: 20px;
+    background-color: #fbfbfb;
+    border-right: 1px solid #BDC6D5;
+    margin-right: 10px;
+}
+.toggle_imgs{
+    margin-top: 16px;
+}
+.toggle_imgs>.file>.submit{
+    font-size: 12px;
+    position: relative;
+    float: left;
+    margin-left: 20px;
+    margin-top: 1px;
+}
+.toggle_imgs>.file{
+    font-size: 12px;
+    line-height: 24px;
+}
+.toggle_imgs>.file>p>input{
+    border-radius: 4px;
+    color:#fff;
+    background-color:#6EC6CF;
+    font-size: 14px;
+    text-align: center;
+    height: 28px;
+    line-height: 28px;
+    width: 84px;
+    cursor: pointer;
+}
+#btnmainImgUrl,#btnthumbImgUrl,#btnqrUrl,#btnGameMainImgUrl{
+    background-color:#33A7C0;
+    margin-left:8px;
+}
+.hasChooseImg{
+    color: #596477;
+    border: 1px solid #bdc6d5;
+    border-radius: 4px;
+    height: 28px;
+    line-height: 28px;
+    padding-left: 4px;
+    float: left;
+    width: 180px;
+}
+.toggle_imgs>div.file>p>input[type=file]{
+    border:none;
+    width:84px;
+    height:32px;
+    z-index: 333;
+    filter:alpha(opacity=0);
+    -moz-opacity:0;
+    -webkit-opacity:0;
+    opacity:0;
+    position:absolute;
+    top:0;
+    left:0;
+    height:100%;
+    color:#fff;
+    outline: none; cursor: pointer;
+}
+.button1 .mrL10{
+    margin-left:10px;
+    cursor: default;
+}
+.mrT10{
+    margin-top: 10px;
+}
+textarea{
+    color: #5D6477;
+    resize: none;
+    padding:7px;
+    width:700px;
+    outline: none;
+    border-radius: 4px;
+    border:1px solid #BDC6D5;
+}
+.sel .second{
+    margin-left:16px;
+}
+.beNumber{
+    display: none;
+}
+.time{ position: relative;}
+.time input{
+    border: none; text-align: left;
+}
+.time img{ position: absolute; right: 20px; top: 8px;}
+
+.sel .second{
+    display: none;
+}
+.button1{ display: block; cursor: pointer; position: relative;}
+.button1 em{ position: absolute; left: 0; top: 0; height: 38px; width: 100%; background:#fff; opacity: 0; z-index: 999; cursor: default;}
+#dayLimit,#timeLimit{ position: relative;}
+
+#timeLimit i{ height: 110px;}
+.second .active>b {
+    background-image: url(../imgs/appliaBu2.png);
+}
+#dayLimit input[type="checkbox"]{
+     display: inline-block; vertical-align: top; margin: 10px 3px 0 18px;
+}
+.second a{ color: #06c; padding: 0 10px 0 0;}
+#timeLimit input[type="text"]{ width: 80px; margin-left: 7px}
+.maskSpan{    width: 260px;
+    display: inline-block;
+    border: 1px solid #BDC6D5;
+    height: 30px;
+    border-radius: 4px;
+    line-height: 30px; position: absolute; left: 220px; top: 8px; background: #f2f2f2; opacity: .4; z-index: 333;}
+.maskSpan1{    width: 260px;
+    display: inline-block;
+    border: 1px solid #BDC6D5;
+    height: 30px;
+    border-radius: 4px;
+    line-height: 30px; position: absolute; left: 0; top: 1px; background: #f2f2f2; opacity: .4; z-index: 333;}
+
+#getCardColor .first_cate li{padding-left:0 !important;padding-right: 0 !important; width: 25px !important;height: 25px;margin: 3px;}
+#getCardColor .first_cate li span{width: 22px;height: 22px; border-radius: 0;padding-left:0 !important;padding-right: 0 !important;}
+#getCardColor .primary_color i{display: block;}
+#getCardColor .primary_color i span{width: 20px;height: 20px;padding-left: 0;padding-right: 0;margin-top: 4px; border-radius: 0;}
+#getCardColor .first_cate li:hover{background-color: #fff !important;}
+
+#createCard input{color: #4a5568;}
+#startTime-error{ position: absolute; left: 8px; top: 26px; font-size: 12px;}
+#endTime-error{ position: absolute; left: 147px; top: 26px; font-size: 12px;}
+#createCard .btnBig{color: #fff;}
+#createCard span i{font-size: 14px;}

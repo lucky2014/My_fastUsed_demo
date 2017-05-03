@@ -1,0 +1,8 @@
+*{ margin: 0; padding: 0; list-style: none;}
+
+/*商家推荐*/
+#bussinessList{ clear: both; overflow: hidden; padding: 0 4%;}
+#bussinessList li{ float: left; width: 21%; margin: 10px 2%; display: inline;}
+#bussinessList li img{ width: 100%; max-height: 36px;}
+
+/*卡券列表*/

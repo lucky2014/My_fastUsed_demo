@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>卡券制作</title>
+    <style>
+    input[type=file]{ background: rgba(0,0,0,.8);}
+    </style>
+<body>
+<div class="file">
+    <p>可为店铺照片或品牌Logo，请确保该Logo与商户名称保持一致。</p>
+    <p>图片建议尺寸：300像素*300像素，大小不超过5MB。支持.jpg等格式的正方形照片。</p>
+    <p class="submit mgTop20">
+        <input type="button" value="上传" class="btn">
+        <input type="file" name="cardLogo" class="cardLogo btn" /> 
+    </p>
+    <input type="text" name="cardLogoValue" class="cardLogoValue" required />
+</div>
+</body>
+<script type="text/javascript" src="../common.lib/sea.js"></script>
+<script type="text/javascript" src="../common.lib/seajs-text/seajs-text-1.1.1/seajs-text.js"></script>
+<script type="text/javascript" src="../config.js"></script>
+<script>
+    seajs.use("sea_css", function(){
+        seajs.use("../tUpdateload/index");
+    });
+</script>
+</html>
