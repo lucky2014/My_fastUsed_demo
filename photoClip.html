@@ -9,23 +9,39 @@
 		<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
 		<meta http-equiv="Pragma" content="no-cache" />
 		<meta http-equiv="Expires" content="0" />
-		<title>卡券兑换-优惠中心</title>
+		<title>图片截图</title>
 		<style>
-			#swiperIndex{ position: relative; width: 100%; height: 180px; overflow: hidden;}
-			.swiper-wrapper{ position: absolute; left: 0; top: 0; height: 180px; width: 1000000px;}
-			.swiper-wrapper .swiper-slide{ float: left; height: 180px;}
+		body {
+			margin: 0;
+			text-align: center;
+		}
+		#clipArea {
+			height: 300px;
+		}
+		#file,
+		#clipBtn {
+			margin: 20px;
+		}
+		#view {
+			margin: 0 auto;
+			width: 200px;
+			height: 200px;
+			background-color: #666;
+		}
 		</style>
 	</head> 
 	<body>
-		<!--商家列表-->
-		<div id="swiperIndex"></div>
+		<div id="clipArea"></div>
+		<input type="file" id="file">
+		<button id="clipBtn">截取</button>
+		<div id="view"></div>
 
 		<script type="text/javascript" src="src/common.lib/sea.js"></script>
 		<script type="text/javascript" src="src/common.lib/seajs-text/seajs-text-1.1.1/seajs-text.js"></script>
 		<script type="text/javascript" src="src/config.js"></script>
 		<script>
 		    seajs.use("sea_css", function(){
-		        seajs.use("../tSwiper/index");
+		        seajs.use("../fastUsed_demo/src/tPhotoClip/index");
 		    });
 		</script>
 	</body>

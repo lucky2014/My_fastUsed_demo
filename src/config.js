@@ -1,6 +1,6 @@
 (function(){
 	var config = {
-		//base: "../../",
+		//base: "../../fastUsed_demo/",
 		alias: {
 			"jquery": "jquery/jquery-1.8.3.min",
 			"handlebars": "handlebars/handlebars.seajs.min",
@@ -12,6 +12,7 @@
 			"datePicker": "jquery.ui/datePicker", //jQueryUI日期插件
 			"jqueryUiBase": "jquery.ui/base", //jQueryUI插件base
 			"jqueryUiWidget": "jquery.ui/widget", //jQueryUI插件widget
+			"PhotoClip": "../../src/common.photoClip/PhotoClip",
 		}
 	};
 
