@@ -21,26 +21,37 @@
         background-position: center;
         background-size: cover;
         width: 260px;
-        height: 400px;
+        height: 400px; background-size: 100% 100%;
     }
+    .swiper-slide a{ display: block; width: 100%; height: 100%;}
+
+    .pinch-zoom-container{ width: 100%;}
+
+    .mask{ position: fixed; left: 0; top: 0; width: 100%; height: 100%; background: rgba(45,63,75,1); z-index: 11; display:none;justify-content:center;align-items:center;}
+    .mask img{ width: 100%; vertical-align: middle; display:flex;justify-content:center;align-items:center; -webkit-user-drag: none;}
     </style>
 </head>
 <body>
     <!-- Swiper -->
     <div class="swiper-container">
         <div class="swiper-wrapper">
-            <div class="swiper-slide" style="background-image:url(imgs/001.jpg)"></div>
-            <div class="swiper-slide" style="background-image:url(imgs/002.jpg)"></div>
-            <div class="swiper-slide" style="background-image:url(imgs/003.jpg)"></div>
-            <div class="swiper-slide" style="background-image:url(imgs/004.jpg)"></div>
-            <div class="swiper-slide" style="background-image:url(imgs/005.jpg)"></div>
-            <div class="swiper-slide" style="background-image:url(imgs/006.jpg)"></div>
-            <div class="swiper-slide" style="background-image:url(imgs/007.jpg)"></div>
+            <div class="swiper-slide" index="1" style="background-image:url(imgs/0001.jpg)"></div>
+            <div class="swiper-slide" index="2" style="background-image:url(imgs/0002.jpg)"></div>
+            <div class="swiper-slide" index="3" style="background-image:url(imgs/0003.jpg)"></div>
+            <div class="swiper-slide" index="4" style="background-image:url(imgs/0004.jpg)"></div>
+            <div class="swiper-slide" index="5" style="background-image:url(imgs/0005.jpg)"></div>
+            <div class="swiper-slide" index="6" style="background-image:url(imgs/0006.jpg)"></div>
+            <div class="swiper-slide" index="7" style="background-image:url(imgs/0007.jpg)"></div>
+            <div class="swiper-slide" index="8" style="background-image:url(imgs/0008.jpg)"></div>
         </div>
     </div>
 
+    <div class="mask"><img src="imgs/0001_1.jpg" /></div>
+
     <!-- Swiper JS -->
+    <script src="js/jquery-1.8.3.min.js"></script>
     <script src="js/swiper.min.js"></script>
+    <script src="js/pinchzoom.js"></script>
 
     <!-- Initialize Swiper -->
     <script>
@@ -58,6 +69,21 @@
             slideShadows : true
         },
         loop: 1
+    });
+
+    $(function(){
+        var w = $(window).width();
+        $(".mask img").height(1.5*w)
+        $(".swiper-slide").click(function(){
+            var index = $(this).attr("index");
+            $(".mask img").attr("src", "imgs/000"+index+"_1.jpg")
+            $(".mask").css("display","flex").show();
+            new RTP.PinchZoom($(".mask img"), {});
+        });
+
+        $(".mask").click(function(){
+            $(this).hide();
+        });
     });
     </script>
 </body>
