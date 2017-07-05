@@ -3,7 +3,7 @@ define(function(require,exports,module){
 	var setup = require("setup");
 	var Engine = require("engine");
     var box = Engine.init();
-    var cardsList = require("../../src/wx_cardList/cardsList.tpl");
+    var cardsList = require("tPagenation/cardsList.tpl");
     var Pagenation = require("pagenation");
     
 	var myWxCard = {

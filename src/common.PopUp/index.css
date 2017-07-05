@@ -1,0 +1,72 @@
+.popUp{
+	width:100%;
+	height:100%;
+	position: fixed;
+	left:0;
+	top:0;
+	background-color: rgba(0,0,0,.6);
+	display: none;
+    z-index: 999;
+}
+.popUp_box{
+	background-color: #fff;
+	min-height: 24px;
+	position: absolute;
+	width:360px;
+	left:50%;
+	margin-left:-180px;
+	top:10%;
+	text-align: center;
+	padding-bottom:12px;
+}
+.pop_btn{
+	height: 32px;
+    line-height: 32px;
+    border: none;
+    width: 20%;
+    border-radius: 5px;
+    color: #fff;
+    margin-left: 5%;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+    background: #BDC7D4;
+    display: inline-block;
+    cursor: pointer;
+}
+.pop_title{
+    background-color: #0A679B;
+    padding: 8px 16px;
+    color:#fff;
+    text-align: left;
+    /*min-height:24px;*/
+}
+.pop_content{
+    margin: 24px auto 10px;
+    text-align: center;
+}
+.pop_content{
+	width:50%;
+}
+.pop_foot{
+    margin: 0 auto 10px;
+    position: relative;
+    text-align: center;
+    width:70%;
+}
+.pop_confirm{
+	background-color:#57a2d6; 
+	margin-left:36px;
+}
+.pop_cancel{
+	background-color: #aaa;
+}
+.popNum{
+    display: inline;
+    padding:6px;
+    min-width:32px;
+    max-width:48px;
+    border: 1px solid #ccc!important;
+    border-radius: 4px;
+}
+.changeNum span{ padding: 0 40px 20px 0; display: inline-block;}

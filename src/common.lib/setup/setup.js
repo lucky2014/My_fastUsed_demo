@@ -1,6 +1,6 @@
 define(function(require, exports, module) {
 	var $ = require("jquery");
-    var popUp = require("../../common.PopUp/index");
+    var popUp = require("common.PopUp/index");
 
     var setupApp = {
         url:"http://wx.yinnima.com:8088/liujia-enterprise-server/", //测试

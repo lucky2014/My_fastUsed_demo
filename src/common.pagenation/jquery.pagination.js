@@ -1,5 +1,5 @@
 define(function (require, exports, module) {
-	require('../../web/common.pagenation/pagination.css');
+	require('common.pagenation/pagination.css');
   var pagination;
   var $ = require('jquery');
   //var Select = require('select');

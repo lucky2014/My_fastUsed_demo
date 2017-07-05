@@ -2,13 +2,13 @@ define(function(require,exports,module){
 	var $ = require("jquery");
     var setup = require("setup");
     require("validator");
-    require("../../../common.partial/commonTable.css");
+    require("common.partial/commonTable.css");
 
-    var renderGetProduct = require("../../src/common.getProduct/index");
-    require("../../src/common.getCardColor/index");
-    require("../../src/common.getCardDays/index");
+    var renderGetProduct = require("/common.getProduct/index");
+    require("common.getCardColor/index");
+    require("common.getCardDays/index");
 
-    var getUserInfo = require("../../../common.getUserInfo/index");
+    var getUserInfo = require("common.getUserInfo/index");
     //判断是否登录
     getUserInfo.init();
     getUserInfo.navSelected("../"); //导航选中状态
@@ -17,13 +17,13 @@ define(function(require,exports,module){
     var isEdit = setup.getQueryString("isEdit");
     if(isEdit && (isEdit == true || isEdit == "true")){
         renderGetProduct();
-        require("../../src/wx_cardAdd/isEdit");
+        require("wx_cardAdd/isEdit");
         
     }else{
         renderGetProduct();
         //日期控件
-        require("../../../common.lib/jquery.ui/datePicker.css");
-        var nowDate = require("../../../common.datepicker/nowDate");
+        require("common.lib/jquery.ui/datePicker.css");
+        var nowDate = require("common.datepicker/nowDate");
         //小部件
         require("jqueryUiWidget");
         //base
